@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: #0F5FA5;
+  height: 100%;
+  display:grid;
+}
+/*styling of the HA icon*/
+.HA_icon{
+  position: absolute;
+  left:2%;
+  top:2%;
+  height: 50px;
+}
+/*Styling of the reload icon*/
+#reload_icon{
+  position: absolute;
+  color: white;
+  right: 2%;
+  top:3%;
+  font-size: 50px;
+  cursor: pointer;
+}
+/*transport buttons are not displayed at the beginning*/
+#transport_buttons{
+  display: none;
+}
+/*styling of the transport/user selection buttons*/
+.buttons {
+  margin:auto;
+  padding-top: 200px;
+  min-width: 700px;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+/*Styling of the selected top buttons on the km selection screen*/
+.selected_button{
+  opacity:0.9;
+  transform: scale(1.4);
+}
+/*Animation of the button after selecting tranport type*/
+.buttons_top-animation{
+  transform: scale(0.3);
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  opacity: 0.4;
+  margin-top: -90px!important;
+  padding-top: 0px;
+}
+/*styling of the button container*/
+.button_container{
+  margin-top: 50px;
+  text-align: center;
+ }
+
+.button_container p{
+  margin-top: 20px;
+  font-size: 25px;
+  color: white;
+  font-family: "BentonSans";
+  cursor: pointer;
+}
+
+.button_container div {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 60px;
+  width: 300px;
+  height: 290px;
+  line-height: 290px;
+  text-align: center;
+  background: #3C8A2E;
+  color: #f1f1f1;
+  border-radius: 25%;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+}
+/*Styling of the km buttons and its container*/
+.km_button_container{
+  text-decoration: none;
+  cursor: pointer;
+
+  width: 240px;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  background: #3C8A2E;
+  color: #f1f1f1;
+  border-radius: 25%;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+  font-size: 25px;
+  color: white;
+  font-family: "BentonSans";
+  cursor: pointer;
+}
+
+.km_button_container_yellow{
+  background: #ffa700;
+
+}
+.km_button_container_red{
+  background: #D2492A;
+}
+
+.km_buttons{
+  display: none;
+  padding-top: 100px;
+  opacity: 0;
+  margin:auto;
+  min-width: 700px;
+  justify-content: space-around;
+  width: 80%;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.selected_user{
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+/*styling of the save button*/
+.save_button{
+  text-decoration: none;
+  cursor: pointer;
+  display: none;
+  margin: auto;
+  margin-top: 40px;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #ffa700;
+  color: #ffa700;
+  border-radius: 50px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+  font-size: 25px;
+  color: white;
+  font-family: "BentonSans";
+  cursor: pointer;
+  justify-content: center;
+}
+/*Final text styling with display none at the beginning*/
+.final_text_div{
+  height: 80%;
+  width: 80%;
+  display: none;
+  padding-top: 260px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.final_text_div p{
+  font-size: 80px;
+  color: white;
+  font-family: "BentonSans";
+}
+
+/*Background color of each of the buttons*/
+#t_hybrid_public{
+	background: #ffa700;
+}
+
+#t_car{
+	background: #D2492A;
+}
+
+#u_student{
+  background: #ffa700;
+}
+
+#u_visitor{
+  background: #D2492A;
+}

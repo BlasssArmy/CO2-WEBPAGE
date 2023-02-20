@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> CO2 PROJECT </title>
+	<link rel="stylesheet" href="Style/stylesheet.css">
+
+	<script src="https://kit.fontawesome.com/9bb70508f6.js" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+
+</head>
+
+<body>
+
+	<script rel="text/javascript" src="js\main.js"></script>
+ <!--HA icon-->
+	<img class="HA_icon" src="https://www.ha.ax/uploads/sites/4/2017/12/logo.png" alt="Högskolan på Åland">
+
+	<!--The buttons for the selection of the type of transport with  the icons and text-->
+	<div id="transport_buttons" class = "transport_buttons buttons">
+		<div id="no_emission" class="button_container" onclick="km_selection(this,'no_emission')">
+			<div id="t_walk">
+				<i class="fa-solid fa-person-running"></i> <i> / </i> <i class="fa fa-bicycle"></i>
+			</div>
+			<p class="desctext_button">Walking | Bike | Electric</p>
+		</div>
+
+		<div id="med_emission" class="button_container" onclick="km_selection(this, 'med_emission')">
+			<div id="t_hybrid_public">
+				<i class="fa-solid fa-bolt"></i> <i> / </i> <i class="fa fa-bus"></i>
+			</div>
+			<p class="desctext_button">Public Transport | Hybrid</p>
+		</div>
+
+		<div id="high-emission" class="button_container" onclick="km_selection(this, 'high-emission')">
+			<div id="t_car">
+				<a  class="fa fa-car"> </a>
+			</div>
+			<p class="desctext_button">Combustion vehicle</p>
+		</div>
+
+	</div>
+
+
+	<!--Butoons for the selection of the user-->
+	<div id="user_buttons" class = "user_buttons buttons">
+		<div class="button_container" onclick="transportSelection('personal')">
+			<div id="professor" >
+				<i class="fa-solid fa-user-tie"></i>
+			</div>
+			<p>Personal</p>
+
+		</div>
+
+		<div class="button_container" onclick="transportSelection('student')">
+			<div id="u_student">
+				<i class="fa-solid fa-graduation-cap"></i>
+			</div>
+			<p>Student</p>
+
+		</div>
+
+		<div class="button_container" onclick="transportSelection('visitor')">
+			<div id="u_visitor">
+				<i class="fa-solid fa-briefcase"></i>
+			</div>
+			<p>Visitor</p>
+
+		</div>
+
+	</div>
+
+	<!--Buttons for the selection of KM-->
+	<div id="km_buttons" class="km_buttons">
+			<div id="km-1" class="km_button_container" onclick="km_selected('km-1')">
+			</div>
+			<div id="km-2" class="km_button_container" onclick="km_selected('km-2')">
+			</div>
+			<div id="km-3" class="km_button_container" onclick="km_selected('km-3')">
+			</div>
+			<div id="km-4" class="km_button_container" onclick="km_selected('km-4')">
+			</div>
+			<div id="km-5" class="km_button_container" onclick="km_selected('km-5')">
+			</div>
+	</div>
+
+	<br>
+	<!--Save button-->
+	<div id="save_button" class="save_button" onclick="load_final()">
+			Save
+	</div>
+	<!--Final text that displays the amount of emissons emmited depending on the km and type of transport-->
+	<div id="final_text_div" class="final_text_div">
+		<p id= final_text> </p>
+	</div>
+<!--Icon for the reload of the page-->
+<i onclick="reload_page()" id="reload_icon" class="fa-solid fa-arrow-rotate-right">
+
+</body>
+
+<footer>
+</footer>
+
+</html>
